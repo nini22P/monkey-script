@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         JavDB Exporter
-// @namespace    https://github.com/nini22P/monkey-script/javdb-exporter
+// @namespace    https://github.com/nini22P/monkey-script/tree/main/javdb-exporter
 // @version      1.3
 // @description  导出 想看、看过、清单 | Export Want, watched, list
 // @match        https://javdb.com/users/want_watch_videos*
@@ -10,8 +10,8 @@
 // @grant        GM_xmlhttpRequest
 // @grant        GM_listValues
 // @license MIT
-// @downloadURL https://update.greasyfork.org/scripts/467309/JavDB%20Exporter.user.js
-// @updateURL https://update.greasyfork.org/scripts/467309/JavDB%20Exporter.meta.js
+// @downloadURL https://github.com/nini22P/monkey-script/raw/refs/heads/main/javdb-exporter/javdb-exporter.user.js
+// @updateURL https://github.com/nini22P/monkey-script/raw/refs/heads/main/javdb-exporter/javdb-exporter.user.js
 // ==/UserScript==
 
 let allVideosInfo = JSON.parse(localStorage.getItem('allVideosInfo')) || [];
