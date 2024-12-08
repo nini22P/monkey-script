@@ -1,3 +1,3 @@
 # Monkey Script
 
-Browser scripts
+Browser scripts / 浏览器脚本
