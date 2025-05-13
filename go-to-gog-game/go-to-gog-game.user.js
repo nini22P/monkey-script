@@ -2,7 +2,7 @@
 // @name         Go to gog-game
 // @namespace    https://github.com/nini22P/monkey-script/tree/main/go-to-gog-game
 // @version      2024-06-18
-// @description  Go to gog-game
+// @description  Go to gog-game | 跳转到 gog-game
 // @author       22
 // @match        https://www.gog.com/*/game/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=gog.com

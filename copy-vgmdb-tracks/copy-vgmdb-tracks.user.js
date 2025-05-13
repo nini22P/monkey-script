@@ -2,7 +2,7 @@
 // @name         Copy VGMdb Tracks
 // @namespace    https://github.com/nini22P/monkey-script/tree/main/copy-vgmdb-tracks
 // @version      2025-05-13
-// @description  Copy tracks from VGMdb
+// @description  Copy tracks from VGMdb | 从 VGMdb 复制曲目
 // @author       22
 // @match        https://vgmdb.net/album/*
 // @icon         https://vgmdb.net/favicon.ico
