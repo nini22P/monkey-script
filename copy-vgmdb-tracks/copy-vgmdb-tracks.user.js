@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Copy VGMdb Tracks
 // @namespace    https://github.com/nini22P/monkey-script/tree/main/copy-vgmdb-tracks
-// @version      2024-12-08
+// @version      2025-05-13
 // @description  Copy tracks from VGMdb
 // @author       22
 // @match        https://vgmdb.net/album/*
@@ -46,12 +46,18 @@
     button.onclick = () => {
       const tracklistElement = document.querySelectorAll('.tl')[tracklistIndex].querySelectorAll('table')[discIndex]
       const rows = tracklistElement.querySelectorAll('tr')
-      let tracklistText = ''
+      let tracklistText = []
 
       rows.forEach(row => {
         const trackNameCell = row.querySelector('td:nth-child(2)')
         if (trackNameCell) {
-          tracklistText += trackNameCell.innerText.trim() + '\n'
+          if (trackNameCell.innerText.trim().length === 0) return
+          if (['A-Side', 'B-Side'].includes(trackNameCell.innerText.trim())) return
+          tracklistText = [...tracklistText, trackNameCell.innerText.trim()]
+        }
+      })
+
+      navigator.clipboard.writeText(tracklistText.join('\n'))
         }
       })
 
