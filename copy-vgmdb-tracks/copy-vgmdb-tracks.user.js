@@ -58,10 +58,6 @@
       })
 
       navigator.clipboard.writeText(tracklistText.join('\n'))
-        }
-      })
-
-      navigator.clipboard.writeText(tracklistText)
     }
 
     return button
