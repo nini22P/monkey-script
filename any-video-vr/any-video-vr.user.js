@@ -92,9 +92,14 @@
     close: '<svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>',
   }
 
-  setInterval(() => {
-    document.querySelectorAll('video:not([data-vr-btn])').forEach(attach)
-  }, 2000)
+  document.querySelectorAll('video:not([data-vr-btn])').forEach(attach)
+  const mo = new MutationObserver((ms) => {
+    for (const m of ms)
+      for (const n of m.addedNodes)
+        if (n.nodeName === 'VIDEO') { if (!n.dataset.vrBtn) attach(n) }
+        else if (n.nodeType === 1) n.querySelectorAll('video:not([data-vr-btn])').forEach(attach)
+  })
+  mo.observe(document.body, { childList: true, subtree: true })
 
   function attach(video) {
     video.dataset.vrBtn = '1'
@@ -115,6 +120,7 @@
     parent.appendChild(btn)
     parent.addEventListener('mouseenter', () => { btn.style.opacity = '1'; btn.style.pointerEvents = 'auto' })
     parent.addEventListener('mouseleave', () => { btn.style.opacity = '0'; btn.style.pointerEvents = 'none' })
+    if (parent.matches(':hover')) { btn.style.opacity = '1'; btn.style.pointerEvents = 'auto' }
   }
 
   let s = null
@@ -160,6 +166,8 @@
 
       const tex = new THREE.VideoTexture(video)
       tex.minFilter = THREE.LinearFilter; tex.magFilter = THREE.LinearFilter
+      tex.wrapS = THREE.RepeatWrapping
+      tex.repeat.x = -1; tex.center.x = 0.5
 
       const geo = new THREE.SphereGeometry(100, 64, 64)
       st.sphere = new THREE.Mesh(geo, new THREE.MeshBasicMaterial({ map: tex, side: THREE.BackSide }))
