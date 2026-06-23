@@ -1,0 +1,16 @@
+{
+  "name": "monkey-script",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch"
+  },
+  "devDependencies": {
+    "@types/node": "^26.0.0",
+    "@types/three": "^0.128.0",
+    "three": "^0.128.0",
+    "typescript": "^5.8",
+    "vite": "^6.3"
+  }
+}

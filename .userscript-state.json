@@ -1,0 +1,18 @@
+{
+  "any-video-vr": {
+    "version": "2026-06-23",
+    "hash": "6e57c609a799dc903684a8ef86164690"
+  },
+  "copy-vgmdb-tracks": {
+    "version": "2025-05-13",
+    "hash": "3b093af16ed89907adbae655d8f90740"
+  },
+  "go-to-gog-game": {
+    "version": "2024-06-18",
+    "hash": "b431217634087ca7840e160b0026f5f4"
+  },
+  "javdb-exporter": {
+    "version": "1.3",
+    "hash": "040b1a536b3466b9ca3c1c0e51afbeab"
+  }
+}

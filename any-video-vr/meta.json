@@ -1,0 +1,6 @@
+{
+  "name": "Any Video VR",
+  "description": "对任意视频开启 VR 模式 | Enable VR mode for any video",
+  "match": ["*://*/*"],
+  "grant": ["none"]
+}

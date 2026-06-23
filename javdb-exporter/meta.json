@@ -1,0 +1,11 @@
+{
+  "name": "JavDB Exporter",
+  "description": "导出 想看、看过、清单 | Export Want, watched, list",
+  "match": [
+    "https://javdb.com/users/want_watch_videos*",
+    "https://javdb.com/users/watched_videos*",
+    "https://javdb.com/users/list_detail*",
+    "https://javdb.com/lists*"
+  ],
+  "grant": ["GM_xmlhttpRequest", "GM_listValues"]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Copy VGMdb Tracks",
+  "description": "Copy tracks from VGMdb | 从 VGMdb 复制曲目",
+  "match": ["https://vgmdb.net/album/*"],
+  "icon": "https://vgmdb.net/favicon.ico",
+  "grant": ["none"]
+}

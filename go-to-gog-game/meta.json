@@ -1,0 +1,7 @@
+{
+  "name": "Go to gog-game",
+  "description": "Go to gog-game | 跳转到 gog-game",
+  "match": ["https://www.gog.com/*/game/*"],
+  "icon": "https://www.google.com/s2/favicons?sz=64&domain=gog.com",
+  "grant": ["none"]
+}

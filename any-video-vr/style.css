@@ -1,0 +1,78 @@
+#vr-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: #000;
+  overflow: hidden
+}
+
+.vr-time {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 11px;
+  font-family: monospace;
+  -webkit-user-select: none;
+  user-select: none
+}
+
+.vr-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: #000;
+  cursor: pointer;
+  padding: 0
+}
+
+.vr-btn:hover {
+  background: rgba(0, 0, 0, 0.1) !important
+}
+
+.vr-layout {
+  font-size: 10px;
+  font-weight: 700
+}
+
+#vr-overlay input[type=range] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 10px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer
+}
+
+#vr-overlay input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 3px;
+  height: 20px;
+  border-radius: 2px;
+  background: #000;
+  cursor: pointer;
+  border: none
+}
+
+#vr-overlay input[type=range]::-moz-range-thumb {
+  width: 2px;
+  height: 20px;
+  border-radius: 3px;
+  background: #000;
+  cursor: pointer;
+  border: none
+}
+
+#vr-overlay input[type=range]::-moz-range-track {
+  height: 10px;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.12);
+  border: none
+}
+
+.vr-prog {
+  width: 200px
+}
