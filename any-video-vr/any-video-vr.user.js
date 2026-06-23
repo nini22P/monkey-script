@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Any Video VR
 // @namespace    https://github.com/nini22P/monkey-script/tree/main/any-video-vr
-// @version      2026-06-18
-// @description  任意视频 360° 沉浸查看 | Immersive 360° view for any video
+// @version      2026-06-23
+// @description  对任意视频开启 VR 模式 | Enable VR mode for any video
 // @author       22
 // @match        *://*/*
 // @grant        none
@@ -310,8 +310,9 @@
     window.addEventListener('mouseup', () => { if (st.isDragging) { st.isDragging = false; overlay.style.cursor = 'default' } })
     overlay.addEventListener('wheel', (e) => {
       if (e.target !== st.renderer?.domElement) return
+      e.preventDefault()
       applyZoom(st, e.deltaY > 0 ? 0.9 : 1.1)
-    }, { passive: true })
+    })
     overlay.addEventListener('touchstart', (e) => {
       if (e.target !== st.renderer?.domElement) return
       if (e.touches.length === 2) {
